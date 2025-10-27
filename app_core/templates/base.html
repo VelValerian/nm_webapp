@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    {% include 'partials/head-meta.html' %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}MVP{% endblock %}</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+    <main class="container">{% block content %}{% endblock %}</main>
+    {% include 'partials/footer.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

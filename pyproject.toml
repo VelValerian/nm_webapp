@@ -1,0 +1,26 @@
+[project]
+name = "nm-webapp"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Valerian",email = "tribusian.valerian@gmail.com"}
+]
+
+readme = "README.md"
+requires-python = ">=3.12,<4"
+dependencies = [
+    "django (==5.2.7)",
+    "django-environ (>=0.12.0,<0.13.0)",
+    "whitenoise (>=6.11.0,<7.0.0)",
+    "pillow (>=12.0.0,<13.0.0)"
+]
+packages = [
+  { include = "config" },
+  { include = "app_core" },
+  { include = "app_trainings" },
+  { include = "app_blog" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
