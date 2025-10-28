@@ -1,0 +1,107 @@
+.header {
+  padding: 44px 0;
+  z-index: 10;
+
+  @include desktop {
+    padding: 32px 0;
+  }
+
+  @include tablet {
+    padding: 16px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      margin-inline: 3vw;
+    }
+
+    @include mobile-s {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    height: 48px;
+  }
+
+  &__menu {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 12px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      @include desktop {
+        column-gap: 16px;
+      }
+
+      @include tablet {
+        font-size: 10px;
+        column-gap: 8px;
+      }
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 20px;
+      color: var(--text-color-primary);
+      background: var(--background-nav-primary);
+      border: var(--border-nav-primary);
+      border-radius: var(--border-radius-nav-button);
+
+      @include desktop {
+        padding: 8px 12px;
+      }
+
+      @include tablet {
+        padding: 8px 10px;
+      }
+
+      @include hover {
+        color: var(--color-accent-orange);
+        border: var(--border-nav-hover);
+        background: var(--nav-background-hover);
+      }
+
+      &:active{
+        color: var(--text-color-alt);
+        border: var(--border-nav-click);
+        background: var(--background-nav-click-gradient);
+      }
+
+      &.is-active {
+        background: var(--background-nav-selected-gradient);
+        border: var(--border-nav-selected);
+        border-radius: var(--border-radius-nav-button);
+
+        @include hover {
+          color: var(--color-accent-orange);
+          border: var(--border-nav-hover);
+          background: var(--nav-background-hover);
+        }
+
+        &:active{
+          color: var(--text-color-alt);
+          border: var(--border-nav-click);
+          background: var(--background-nav-click-gradient);
+        }
+      }
+    }
+
+
+  }
+}
+
