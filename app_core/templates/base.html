@@ -2,11 +2,32 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    {% include 'partials/head-meta.html' %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}MVP{% endblock %}</title>
-  </head>
+  {% load static %}
+
+  <!-- База -->
+  {% include 'partials/head-meta.html' %}
+
+  <title>{% block title %}MVP{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}">
+
+  <!-- Превью для соцсетей/мессенджеров -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="{% block og_title %}{% block title %}MVP{% endblock %}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{% block meta_description %}Короткое описание страницы.{% endblock %}{% endblock %}">
+  <meta property="og:image" content="{% block og_image %}{% static 'img/og-default.jpg' %}{% endblock %}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Иконки -->
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <link rel="icon" href="{% static 'img/favicon-32.png' %}" sizes="32x32">
+  <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  {% block extra_head %}{% endblock %}
+</head>
   <body>
     {% include 'partials/header.html' %}
     <main class="container">{% block content %}{% endblock %}</main>
@@ -14,3 +35,7 @@
     <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
+
+
+
+
