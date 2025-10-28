@@ -1,7 +1,7 @@
-@import 'mixins';
+@use './mixins' as m;
 
 body {
-  @include fluid-text(16, 14);
+  @include m.fluid-text(16, 14);
 
   font-family: var(--font-family-base);
   font-weight: 500;
@@ -35,17 +35,17 @@ h1, h2, h3, h4 {
 }
 
 h1, .h1 {
-  @include fluid-text(72, 32);
+  @include m.fluid-text(72, 32);
 }
 
 h2, .h2 {
-  @include fluid-text(40, 36);
+  @include m.fluid-text(40, 36);
 }
 
 h3, .h3 {
-  @include fluid-text(30, 26);
+  @include m.fluid-text(30, 26);
 }
 
 h4, .h4 {
-  @include fluid-text(20, 16);
+  @include m.fluid-text(20, 16);
 }

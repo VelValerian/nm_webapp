@@ -1,5 +1,8 @@
-@mixin fluid-text($max: 120, $min: 48){
-  font-size: clamp(#{$min}px, #{$max / 1920 *100}vw, #{$max}px);
+@use 'sass:math';
+
+
+@mixin fluid-text($max: 120, $min: 48, $base:1920){
+  font-size: clamp(#{$min}px, #{math.div($max, $base) * 100}vw, #{$max}px);
 }
 
 @mixin reset-link {

@@ -1,12 +1,14 @@
+@use '../tokens/media' as media;
+
 .header {
   padding: 44px 0;
   z-index: 10;
 
-  @include desktop {
+  @include media.desktop {
     padding: 32px 0;
   }
 
-  @include tablet {
+  @include media.tablet {
     padding: 16px 0;
   }
 
@@ -16,11 +18,11 @@
     align-items: center;
     gap: 20px;
 
-    @include mobile {
+    @include media.mobile {
       margin-inline: 3vw;
     }
 
-    @include mobile-s {
+    @include media.mobile-s {
       flex-direction: column;
     }
   }
@@ -34,7 +36,7 @@
     font-weight: 700;
     text-transform: uppercase;
 
-    @include desktop {
+    @include media.desktop {
       font-size: 12px;
     }
 
@@ -43,11 +45,11 @@
       align-items: center;
       column-gap: 20px;
 
-      @include desktop {
+      @include media.desktop {
         column-gap: 16px;
       }
 
-      @include tablet {
+      @include media.tablet {
         font-size: 10px;
         column-gap: 8px;
       }
@@ -62,15 +64,15 @@
       border: var(--border-nav-primary);
       border-radius: var(--border-radius-nav-button);
 
-      @include desktop {
+      @include media.desktop {
         padding: 8px 12px;
       }
 
-      @include tablet {
+      @include media.tablet {
         padding: 8px 10px;
       }
 
-      @include hover {
+      @include media.hover {
         color: var(--color-accent-orange);
         border: var(--border-nav-hover);
         background: var(--nav-background-hover);
@@ -87,7 +89,7 @@
         border: var(--border-nav-selected);
         border-radius: var(--border-radius-nav-button);
 
-        @include hover {
+        @include media.hover {
           color: var(--color-accent-orange);
           border: var(--border-nav-hover);
           background: var(--nav-background-hover);
