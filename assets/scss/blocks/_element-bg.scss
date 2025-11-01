@@ -1,0 +1,22 @@
+.background-wrapper{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;     /* корректная видимая высота на мобилках */
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.element-bg {
+  position: absolute;
+  pointer-events: none;
+
+  &__background-img {
+    inset: 0;
+    background: url("../element/bg.svg") no-repeat center;
+    z-index: -1;
+    background-size: cover;
+  }
+
+}
