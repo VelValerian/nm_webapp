@@ -1,10 +1,40 @@
-<header class="site-header">
-  <nav class="nav">
-    <a href="{% url 'core:home' %}">Главная</a>
-    <a href="{% url 'core:about' %}">Про Меня</a>
-    <a href="{% url 'core:corporate' %}">Корпоративные тренировки</a>
-    <a href="{% url 'trainings:list' %}">Тренировки</a>
-    <a href="{% url 'blog:list' %}">Блог</a>
-    <a href="{% url 'core:contacts' %}">Контакты</a>
-  </nav>
+<header class="header">
+  <div class="header__inner container">
+    <a class="header__logo logo" href="{% url 'core:home' %}">
+      <img
+              class="logo__image"
+              src="../../static/icons/logo__icon.svg"
+              alt="NoMondays"
+              width="194" height="32" loading="lazy"
+      />
+    </a>
+    <nav class="header__menu hidden-mobile">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a class="header__menu-link is-active" href="{% url 'core:home' %}">Главная</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="{% url 'trainings:list' %}">Занятия</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="{% url 'core:corporate' %}">Корпоративы</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="{% url 'blog:list' %}">Блог</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="{% url 'core:about' %}">Про Меня</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="{% url 'core:contacts' %}">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+<!--    <button class="header__menu-mobile button button&#45;&#45;menu visible-mobile"-->
+<!--            type="button"-->
+<!--            onclick="mobileMenu.showModal()"-->
+<!--    >-->
+<!--      Меню-->
+<!--    </button>-->
+  </div>
 </header>
