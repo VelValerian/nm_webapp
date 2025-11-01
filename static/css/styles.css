@@ -612,9 +612,27 @@ pre {
 }
 .element-bg__background-img {
   inset: 0;
+  z-index: -2;
   background: url("../element/bg.svg") no-repeat center;
-  z-index: -1;
   background-size: cover;
+}
+.element-bg__background-hex-bg {
+  inset: 0;
+  z-index: -1;
+  background: url("../element/hex-bg.svg") no-repeat center;
+  background-size: contain;
+}
+.element-bg__background-polygon-orange-bg {
+  inset: 0;
+  z-index: -1;
+  background: url("../element/polygon-orange-bg.svg") no-repeat center;
+  background-size: contain;
+}
+.element-bg__background-hex-grey-bg {
+  inset: 0;
+  z-index: -1;
+  background: url("../element/hex-grey-bg.svg") no-repeat center;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=styles.css.map */
