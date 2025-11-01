@@ -142,10 +142,6 @@ textarea { resize: vertical; }
 fieldset { margin: 0; padding: 0; border: 0; }
 legend { padding: 0; }
 
-/* 6) Скроллбар — единая настройка (убрали дубли) */
-:root {
-  scrollbar-gutter: stable both-edges;
-}
 
 /* 7) Акцентный цвет нативных контролов */
 input[type="checkbox"],

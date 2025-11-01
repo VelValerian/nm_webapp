@@ -29,6 +29,7 @@
   {% block extra_head %}{% endblock %}
 </head>
   <body>
+    {% include 'partials/background.html' %}
     {% include 'partials/header.html' %}
     <main class="container">{% block content %}{% endblock %}</main>
     {% include 'partials/footer.html' %}

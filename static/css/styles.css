@@ -250,11 +250,6 @@ legend {
   padding: 0;
 }
 
-/* 6) Скроллбар — единая настройка (убрали дубли) */
-:root {
-  scrollbar-gutter: stable both-edges;
-}
-
 /* 7) Акцентный цвет нативных контролов */
 input[type=checkbox],
 input[type=radio],
@@ -468,7 +463,7 @@ pre {
   /* Other */
   --font-family-base: "Zen Maru Gothic", sans-serif;
   --font-family-sub: "Roboto", sans-serif;
-  --container-width: 1716px;
+  --container-width: 1160px;
   --island-padding-x-large: 32px;
   --island-padding-x-small: 16px;
   --section-padding-desktop-y: 20px;
@@ -604,10 +599,10 @@ pre {
 .background-wrapper {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100vh; /* корректная видимая высота на мобилках */
   pointer-events: none;
-  z-index: -10;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -616,13 +611,9 @@ pre {
   pointer-events: none;
 }
 .element-bg__background-img {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  aspect-ratio: 1920/900;
-  background: url("./element/bg.svg") no-repeat center;
-  z-index: -8;
+  inset: 0;
+  background: url("../element/bg.svg") no-repeat center;
+  z-index: -1;
   background-size: cover;
 }
 
