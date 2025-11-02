@@ -5,8 +5,10 @@
 {% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
 
 {% block content %}
-  <section class="hero">
-    <h1>Главная</h1>
-    <p>Здесь будет герой-блок.</p>
-  </section>
+<section class="section container">
+  {% include 'partials/island/island-main.html' %}
+</section>
+<section class="section container">
+  {% include 'partials/island/island-main-exercise.html' %}
+</section>
 {% endblock %}
