@@ -135,6 +135,58 @@
   }
 }
 
+.island-main-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+
+    @include media.desktop {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    text-align: left;
+    max-width: 50%;
+    color: var(--text-color-primary);
+
+    @include media.desktop {
+      max-width: 85%;
+    }
+
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+
+      @include media.desktop {
+        align-items: center;
+      }
+    }
+  }
+}
+
+
 // Ниже пока не использовали
 
 .island-about-mini {
@@ -219,59 +271,7 @@
   }
 }
 
-.island-contact-mini {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  overflow: hidden;
 
-  &__header-wrapper {
-    display: flex;
-    justify-content: flex-end;
-
-    @include media.mobile-s {
-      flex-direction: column-reverse;
-      gap: 16px;
-    }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 32px;
-
-    @include media.desktop {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__description {
-    max-width: 45%;
-    color: var(--text-color-primary);
-
-    @include media.desktop {
-      max-width: 80%;
-    }
-
-    @include media.mobile-s {
-      font-size: 14px;
-      text-align: center;
-    }
-  }
-
-  &__form-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-
-    @include media.desktop {
-      align-items: center;
-    }
-  }
-
-}
 
 .island-blog-mini {
   display: flex;

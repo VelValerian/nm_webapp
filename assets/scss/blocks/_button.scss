@@ -1,0 +1,37 @@
+@use '../tokens/media' as media;
+@use '../tokens/mixins' as m;
+
+.button {
+  @include m.flex-center(true);
+
+  height: var(--button-height);
+  width: 164px;
+  padding-inline: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color-button-primary);
+  border: var(--border-button-primary);
+  background: var(--background-button-primary-gradient);
+  border-radius: var(--border-radius-button);
+  transition: all var(--transition-duration);
+
+  @include media.hover {
+    color: var(--text-color-button-hover);
+    border: var(--border-button-hover);
+    background: var(--background-button-hover-gradient);
+  }
+
+  &:active {
+    color: var(--text-color-button-click);
+    border: var(--border-button-click);
+    background: var(--background-button-click-gradient);
+  }
+}
+
+.button--menu {
+  color: var(--color-primary);
+  border: var(--border-nav-selected);
+  background: var(--background-nav-selected-gradient);
+  transition: all var(--transition-duration);
+}

@@ -1,0 +1,49 @@
+@use '../tokens/media' as media;
+
+.field {
+  position: relative;
+}
+
+.field__input {
+  width: 316px;
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--text-color-primary);
+  background: var(--background-text-field-primary-gradient);
+  border: var(--border-text-field-primary);
+  border-radius: var(--border-radius-text-field);
+  outline: none;
+
+  &::placeholder {
+    color: transparent; // скрываем placeholder, чтобы не мешал
+  }
+
+  @include media.hover {
+    background: var(--background-text-field-hover-gradient);
+    border: var(--border-text-field-hover);
+  }
+
+  &:focus {
+    background: var(--background-text-field-selected-gradient);
+    border: var(--border-text-field-selected);
+  }
+
+  &:focus + .field__label,
+  &:not(:placeholder-shown) + .field__label {
+    transform: translateY(-14px);
+    font-family: inherit;
+    color: var(--text-color-tertary);
+  }
+}
+
+.field__label {
+  position: absolute;
+  left: 24px;
+  top: 18px;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all var(--transition-duration) ease;
+  pointer-events: none;
+}
