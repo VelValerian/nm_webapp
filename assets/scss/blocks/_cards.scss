@@ -1,0 +1,66 @@
+@use '../tokens/media' as media;
+
+// Карточка для карусели "Занятий" главной страницы
+.exercise-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 252px;
+  height: 356px;
+  border-radius: var(--border-radius-card-small);
+  background: var(--background-card-main-gradient);
+  padding: 16px 12px;
+  box-shadow: var(--shadow-island-inner-small);
+  backdrop-filter: var(--blur-bg-island-medium);
+  position: relative;
+  overflow: hidden;
+
+  transition: filter 0.3s ease, opacity 0.3s ease;
+
+  @include media.mobile{
+    width: 95%;
+    height: auto;
+
+  }
+
+  @include media.hover {
+    background: var(--background-card-hover-gradient);
+  }
+
+  &:active {
+    background: var(--background-card-select-gradient);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 252px;
+    height: 252px;
+    overflow: hidden;
+
+    @include media.mobile{
+      height: auto;
+
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+
+    //@include media.mobile{
+    //
+    //}
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color-primary);
+  }
+}

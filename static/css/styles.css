@@ -307,7 +307,7 @@ pre {
 }
 @media (max-width: 768px) {
   .container {
-    gap: var(--island-padding-x-small);
+    padding-inline: var(--island-padding-x-small);
   }
 }
 
@@ -472,6 +472,67 @@ pre {
   --input-hight-text-field: 48px;
   --button-height: 38px;
   --transition-duration: 0.2s;
+}
+
+.exercise-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 252px;
+  height: 356px;
+  border-radius: var(--border-radius-card-small);
+  background: var(--background-card-main-gradient);
+  padding: 16px 12px;
+  box-shadow: var(--shadow-island-inner-small);
+  backdrop-filter: var(--blur-bg-island-medium);
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .exercise-card {
+    width: 95%;
+    height: auto;
+  }
+}
+@media (hover: hover) {
+  .exercise-card:hover {
+    background: var(--background-card-hover-gradient);
+  }
+}
+@media (hover: none) {
+  .exercise-card:active {
+    background: var(--background-card-hover-gradient);
+  }
+}
+.exercise-card:active {
+  background: var(--background-card-select-gradient);
+}
+.exercise-card__image-wrapper {
+  position: relative;
+  width: 252px;
+  height: 252px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .exercise-card__image-wrapper {
+    height: auto;
+  }
+}
+.exercise-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+.exercise-card__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color-primary);
 }
 
 .header {
@@ -687,7 +748,7 @@ pre {
 }
 @media (max-width: 768px) {
   .island-main__logo-icon-image {
-    max-width: 128px;
+    max-width: 164px;
   }
 }
 .island-main__brand-name {
@@ -730,6 +791,47 @@ pre {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-color-primary);
+}
+
+.island-main-exercise {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.island-main-exercise__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.island-main-exercise__description-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.island-main-exercise__description {
+  font-size: 20px;
+  text-align: left;
+  color: var(--text-color-primary);
+}
+@media (max-width: 768px) {
+  .island-main-exercise__description {
+    width: 80%;
+  }
+}
+@media (max-width: 360px) {
+  .island-main-exercise__description {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+.island-main-exercise__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
 }
 
 .island-about-mini {
@@ -813,56 +915,6 @@ pre {
     width: 70%;
     font-size: 14px;
   }
-}
-
-.island-exercise-mini {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-}
-.island-exercise-mini__header-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.island-exercise-mini__description-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.island-exercise-mini__description {
-  width: 75%;
-  text-align: center;
-  color: var(--text-color-primary);
-}
-@media (max-width: 768px) {
-  .island-exercise-mini__description {
-    width: 80%;
-  }
-}
-@media (max-width: 360px) {
-  .island-exercise-mini__description {
-    width: 90%;
-    font-size: 14px;
-  }
-}
-.island-exercise-mini__carousel {
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.island-exercise-mini__carousel::-webkit-scrollbar {
-  display: none;
-}
-.island-exercise-mini__pagination {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
 }
 
 .island-contact-mini {
@@ -954,6 +1006,46 @@ pre {
   .island-blog-mini__content {
     gap: 12px;
   }
+}
+
+.highlight-text {
+  font-size: 32px;
+  font-weight: 700;
+  background: var(--color-accent-main-gradient-90);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* для Firefox */
+  color: var(--color-accent-orange); /* запасной вариант */
+}
+@media (max-width: 360px) {
+  .highlight-text {
+    font-size: 28px;
+  }
+}
+
+.title-island-main-page {
+  font-family: var(--font-family-sub);
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-color-primary);
+}
+
+.title-link-island-main-page {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  color: var(--text-color-primary);
 }
 
 /*# sourceMappingURL=styles.css.map */

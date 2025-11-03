@@ -38,7 +38,7 @@
     }
 
     @include media.mobile {
-      max-width: 128px;
+      max-width: 164px;
     }
   }
 
@@ -91,6 +91,51 @@
     color: var(--text-color-primary);
     }
 }
+
+.island-main-exercise {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+&__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+  &__description-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__description {
+    font-size: 20px;
+    text-align: left;
+    color: var(--text-color-primary);
+
+    @include media.mobile {
+      width: 80%;
+    }
+
+    @include media.mobile-s {
+      width: 90%;
+      font-size: 14px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+  }
+}
+
+// Ниже пока не использовали
 
 .island-about-mini {
   position: relative;
@@ -171,62 +216,6 @@
         font-size: 14px;
       }
     }
-  }
-}
-
-.island-exercise-mini {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-
-&__header-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-  &__description-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  &__description {
-    width: 75%;
-    text-align: center;
-    color: var(--text-color-primary);
-
-    @include media.mobile {
-      width: 80%;
-    }
-
-    @include media.mobile-s {
-      width: 90%;
-      font-size: 14px;
-    }
-  }
-
-  &__carousel {
-    display: flex;
-    gap: 24px;
-    width: 100%;
-    //max-width: 864px;
-    overflow-x: auto; // было hidden — теперь scrollable
-    scroll-behavior: smooth;
-
-    // Прячем скроллбар
-    scrollbar-width: none; // Firefox
-    &::-webkit-scrollbar {
-      display: none; // Chrome, Safari
-    }
-  }
-
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
   }
 }
 

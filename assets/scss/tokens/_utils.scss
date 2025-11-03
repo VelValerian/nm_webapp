@@ -8,7 +8,7 @@
   padding-inline: var(--island-padding-x-large);
 
   @include media.mobile {
-    gap: var(--island-padding-x-small);
+    padding-inline: var(--island-padding-x-small);
   }
 }
 

@@ -1,0 +1,40 @@
+@use '../tokens/media' as media;
+
+.highlight-text {
+  font-size: 32px;
+  font-weight: 700;
+  background: var(--color-accent-main-gradient-90);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* для Firefox */
+  color: var(--color-accent-orange);     /* запасной вариант */
+
+  @include media.mobile-s {
+    font-size: 28px;
+  }
+}
+
+.title-island-main-page {
+  font-family: var(--font-family-sub);
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-color-primary);
+}
+
+.title-link-island-main-page {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  color: var(--text-color-primary);
+}
