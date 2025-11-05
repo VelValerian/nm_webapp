@@ -25,6 +25,7 @@
     @include media.mobile {
       margin-inline: 3vw;
       flex-direction: column;
+      align-items: center;
       gap: 24px;
     }
 
