@@ -36,30 +36,6 @@
                 </h5>
             </div>
         </div>
-        <div class="island-main-contact__form">
-            <form class="island-main-contact__form-body">
-                <div class="island-main-contact__field field">
-                    <input
-                            class="field__input"
-                            id="name"
-                            name="name"
-                            placeholder="Ваше имя"
-                    />
-                    <label for="phone" class="field__label">Укажите Имя</label>
-                </div>
-                <div class="island-main-contact__field field">
-                    <input
-                            class="field__input"
-                            id="phone"
-                            name="phone"
-                            placeholder="+7(___)___-__-__"
-                            type="tel"
-                            required
-                    />
-                    <label for="phone" class="field__label">Номер Телефона</label>
-                </div>
-                <button type="submit" class="field__button button">Отправить</button>
-            </form>
-        </div>
+        {% include 'partials/form.html' %}
     </div>
 </div>
