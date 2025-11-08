@@ -35,15 +35,15 @@ h1, h2, h3, h4 {
 }
 
 h1, .h1 {
-  @include m.fluid-text(72, 32);
+  @include m.fluid-text(56, 36);
 }
 
 h2, .h2 {
-  @include m.fluid-text(40, 36);
+  @include m.fluid-text(40, 32);
 }
 
 h3, .h3 {
-  @include m.fluid-text(30, 26);
+  @include m.fluid-text(30, 24);
 }
 
 h4, .h4 {
