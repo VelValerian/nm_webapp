@@ -6,9 +6,11 @@
   max-width: 1224px;
   margin-inline: auto;
   padding-inline: var(--island-padding-x-large);
+  padding-bottom: var(--island-padding-x-large);
 
   @include media.mobile {
     padding-inline: var(--island-padding-x-small);
+    padding-bottom: var(--island-padding-x-small);
   }
 }
 
