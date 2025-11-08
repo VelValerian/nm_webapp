@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}Про меня{% endblock %}
+{% block title %}NoMondays - Главная{% endblock %}
+{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+{% block og_title %}NoMondays - Главная{% endblock %}
+{% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+
 {% block content %}
-  <section class="hero">
-    <h1>Про меня</h1>
-    <p>Здесь будет про-меня-блок.</p>
-  </section>
+<section class="section container">
+  {% include 'partials/island/island-about-advantages.html' %}
+</section>
+<section class="section container">
+  {% include 'partials/island/island-about-me.html' %}
+</section>
+<section class="section container">
+  {% include 'partials/island/island-about-experience.html' %}
+</section>
 {% endblock %}
