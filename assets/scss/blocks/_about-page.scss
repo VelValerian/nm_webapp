@@ -7,19 +7,7 @@
   flex-direction: column;
   width: 100%;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 16px;
-    color: var(--text-color-secondary);
-
-    @include media.desktop {
-      justify-content: normal;
-    }
-  }
-
-  &-title-wrapper {
+  &-title {
     display: flex;
     flex-direction: column;
 
@@ -30,268 +18,68 @@
     }
   }
 
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--text-color-secondary);
 
-
-
-
-
-
-  &__intro {
-    font-weight: 900;
-    line-height: 1.5;
-
-    &--me {
-      color: var(--text-color-primary);
-      margin-left: 172px;
-      min-width: 440px;
-
-      @include media.desktop {
-        margin-left: 76px;
-        min-width: 316px;
-      }
-    }
-
-    &--exp {
-      color: var(--text-color-primary);
-      font-size: 24px;
-      margin-top: 16px;
-      margin-left: 16px;
-      width: 380px;
-    }
-  }
-
-  &__text {
-    width: 100%;
-    line-height: 1.5;
-    min-width: 252px;
-
-    &--up {
-      color: var(--text-color-primary);
-      min-width: 412px;
-      margin-top: 16px;
-      margin-left: 200px;
-      text-indent: 2em;
-
-      @include media.desktop {
-        margin-left: 140px;
-
-      }
-    }
-
-    &--down {
-      color: var(--text-color-primary);
-      min-width: 312px;
-      margin-top: 16px;
-      margin-left: 276px;
-      text-indent: 2em;
-
-      @include media.desktop {
-        margin-left: 152px;
-      }
-    }
-
-    &--up-exp {
-      color: var(--text-color-primary);
-      width: 380px;
-      margin-top: 16px;
-      margin-left: 32px;
-      text-indent: 2em;
-
-    }
-
-    &--down-exp {
-      color: var(--text-color-primary);
+    &-inner-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      font-weight: 700;
-      width: 324px;
-      margin-top: 16px;
-      margin-left: 32px;
+      width: 80%;
 
-      p {
-        margin-bottom: 0;
+      @include media.tablet {
+        width: 70%;
+      }
 
+      @include media.mobile {
+        width: 85%;
+      }
+
+      &__text {
+        width: 100%;
+        line-height: 1.5;
+        min-width: 252px;
+        text-indent: 2em;
       }
     }
-
   }
 
-  &__logo {
-    width: 200px;
-  }
-
-  &-timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    margin-top: 32px;
-
-    &__line {
+  &-image-wrapper {
+    &--me {
       position: absolute;
-      width: 460px;
-      height: 4px;
-      background: var(--color-white-accent-main-gradient-90);
-      border-radius: 2px;
-      right: 0;
-    }
+      top: 20%;
+      left: -1%;
+      z-index: -1;
+      max-width: 432px;
+      height: auto;
+      overflow: hidden;
 
-    &__tick {
-      position: absolute;
-      font-weight: 700;
-      padding: 8px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2px;
-        height: 12px;
-        background-color: var(--color-primary);
+      @include media.tablet {
+        left: -5%;
+        max-width: 260px;
       }
-    }
 
-    &__events {
+      @include media.mobile {
+        opacity: 0.5;
+      }
+
+    }
+    &--exp {
       display: flex;
-      gap: 8px;
-      text-align: center;
-      margin-top: 32px;
-      height: 112px;
-    }
-
-    &__event {
-      flex: 1;
-      font-size: 14px;
-      font-weight: 700;
-      max-width: 140px;
-
-      p:first-child {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  &-timeline-exp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: auto;
-    margin-top: 32px;
-
-    &__line {
-      position: absolute;
-      width: 460px;
-      height: 4px;
-      background: var(--color-orange-accent-main-gradient-90);
-      border-radius: 2px;
-      left: 0;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%) rotate(-45deg);
-        width: 16px;
-        height: 16px;
-        border-right: 6px solid var(--color-red-075); // оранжевая граница
-        border-bottom: 6px solid var(--color-red-075);
-        border-radius: 2px;
-      }
-    }
-
-    &__tick {
-      position: absolute;
-      font-weight: 700;
-      padding: 8px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2px;
-        height: 12px;
-        background-color: var(--color-primary);
-      }
-    }
-
-    &__events {
-      display: flex;
-      gap: 32px;
-      text-align: center;
-      margin-top: 32px;
-      height: 112px;
-    }
-
-    &__event {
-      flex: 1;
-      font-size: 14px;
-      font-weight: 700;
-      max-width: 132px;
-
-      p:first-child {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  &__image-wrapper--me {
-    position: absolute;
-    top: 20%;
-    left: -5%;
-    z-index: -1;
-    max-width: 432px;
-    overflow: hidden;
-
-    @include media.desktop {
-      top: 30%;
-      left: 0;
-      max-width: 260px;
-    }
-  }
-
-  &__element-wrapper--1percent {
-    position: absolute;
-    top: 5%;
-    right: 20%;
-    z-index: -1;
-    width: 154px;
-    height: auto;
-  }
-  &__element-wrapper--25year {
-    position: absolute;
-    top: 37%;
-    right: 26%;
-    z-index: -1;
-    width: 154px;
-    height: auto;
-  }
-  &__element-wrapper--10year {
-    position: absolute;
-    top: 55%;
-    right: 5%;
-    z-index: -1;
-    width: 154px;
-    height: auto;
-  }
-
-  &__image-wrapper--exp {
-    position: absolute;
-    top: -20%;
-    right: -7%;
-    z-index: -2;
-    max-width: 400px;
-    overflow: hidden;
-
-    @include media.desktop {
-      top: 6%;
+      position: relative;
+      justify-content: flex-end;  /* прижать к правому краю острова */
+      margin: 24px 0 0 0;
       right: -5%;
-      max-width: 260px;
+
+      @include media.desktop {
+        top: 6%;
+        right: -5%;
+        //max-width: 260px;
+      }
     }
   }
+
+
 }
