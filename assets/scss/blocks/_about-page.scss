@@ -13,7 +13,7 @@
 
     &--name {
       font-size: 24px;
-      margin-left: 108px;
+      margin-left: 96px;
       color: var(--text-color-primary)
     }
   }
@@ -23,6 +23,17 @@
     flex-direction: column;
     align-items: flex-end;
     color: var(--text-color-secondary);
+
+    &-advantages {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      p {
+        text-indent: 2em;
+      }
+
+    }
 
     &-inner-wrapper {
       display: flex;
@@ -44,6 +55,7 @@
         text-indent: 2em;
       }
     }
+
   }
 
   &-image-wrapper {
@@ -73,10 +85,9 @@
       margin: 24px 0 0 0;
       right: -5%;
 
-      @include media.desktop {
+      @include media.tablet {
         top: 6%;
-        right: -5%;
-        //max-width: 260px;
+        right: -10%;
       }
     }
   }
