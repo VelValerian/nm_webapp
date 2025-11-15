@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Контакты{% endblock %}
+{% block title %}NoMondays - Контакты{% endblock %}
+{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+{% block og_title %}NoMondays - Контакты{% endblock %}
+{% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+
 {% block content %}
-  <section class="hero">
-    <h1>Контакты</h1>
-    <p>Здесь будет Контакты-блок.</p>
-  </section>
+<section class="section container">
+  {% include 'partials/island/island-about-advantages.html' %}
+</section>
 {% endblock %}
