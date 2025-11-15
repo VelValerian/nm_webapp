@@ -42,7 +42,7 @@
   font-display: swap;
 }
 body {
-  font-size: clamp(14px, 0.8333333333vw, 16px);
+  font-size: clamp(16px, 0.9375vw, 18px);
   font-family: var(--font-family-base);
   font-weight: 700;
   line-height: 1.28;
@@ -1274,6 +1274,7 @@ pre {
   max-width: 432px;
   height: auto;
   overflow: hidden;
+  opacity: 0.7;
 }
 @media (max-width: 1023px) {
   .about-section-image-wrapper--me {
@@ -1286,18 +1287,59 @@ pre {
     opacity: 0.5;
   }
 }
-.about-section-image-wrapper--exp {
+.about-section-image-wrapper--trainer {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 110%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.7;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .about-section-image-wrapper--trainer {
+    opacity: 0.5;
+  }
+}
+.about-section-image-wrapper--trainer img {
+  height: 100%;
+  width: auto;
+  max-height: none;
+  max-width: none;
+}
+.about-section-image-wrapper--exp-start {
   display: flex;
   position: relative;
   justify-content: flex-end; /* прижать к правому краю острова */
-  margin: 24px 0 0 0;
   right: -5%;
+  margin: 24px 0 0 0;
 }
 @media (max-width: 1023px) {
-  .about-section-image-wrapper--exp {
+  .about-section-image-wrapper--exp-start {
     top: 6%;
     right: -10%;
   }
+}
+.about-section-image-wrapper--exp-end {
+  display: flex;
+  position: relative;
+  left: -5%;
+  margin: 24px 0 0 0;
+}
+@media (max-width: 1023px) {
+  .about-section-image-wrapper--exp-end {
+    top: 6%;
+    right: -10%;
+  }
+}
+.about-section-image-wrapper--bullets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 32px;
+  gap: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */

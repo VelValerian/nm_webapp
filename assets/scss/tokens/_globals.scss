@@ -1,7 +1,7 @@
 @use './mixins' as m;
 
 body {
-  @include m.fluid-text(16, 14);
+  @include m.fluid-text(18, 16);
 
   font-family: var(--font-family-base);
   font-weight: 700;

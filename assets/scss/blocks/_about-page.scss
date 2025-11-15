@@ -67,6 +67,7 @@
       max-width: 432px;
       height: auto;
       overflow: hidden;
+      opacity: 0.7;
 
       @include media.tablet {
         left: -5%;
@@ -78,17 +79,64 @@
       }
 
     }
-    &--exp {
-      display: flex;
-      position: relative;
-      justify-content: flex-end;  /* прижать к правому краю острова */
-      margin: 24px 0 0 0;
-      right: -5%;
+    &--trainer {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 110%;
+      z-index: -1;
+      overflow: hidden;
+      opacity: 0.7;
+      pointer-events: none;
 
-      @include media.tablet {
-        top: 6%;
-        right: -10%;
+      @include media.mobile {
+        opacity: 0.5;
       }
+
+      img {
+        height: 100%;
+        width: auto;
+        max-height: none;
+        max-width: none;
+      }
+
+    }
+
+    &--exp {
+      &-start {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;  /* прижать к правому краю острова */
+        right: -5%;
+        margin: 24px 0 0 0;
+
+        @include media.tablet {
+          top: 6%;
+          right: -10%;
+        }
+      }
+      &-end {
+        display: flex;
+        position: relative;
+        left: -5%;
+        margin: 24px 0 0 0;
+
+        @include media.tablet {
+          top: 6%;
+          right: -10%;
+        }
+      }
+
+    }
+
+    &--bullets {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 32px;
+      gap: 24px;
+
     }
   }
 
