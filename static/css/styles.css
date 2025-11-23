@@ -990,11 +990,19 @@ pre {
   flex-direction: row;
   justify-content: space-around;
 }
+@media (max-width: 1023px) {
+  .island-contact-content-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 .island-contact-content-info-links__list {
   display: flex;
   flex-direction: column;
   align-items: self-start;
-  gap: 24px;
+  gap: 1rem;
+  padding: 2rem;
 }
 .island-contact-content-info-links__list--item {
   display: flex;
@@ -1023,6 +1031,62 @@ pre {
   text-decoration: underline;
   text-decoration-thickness: 0.02em;
   text-underline-offset: 0.2em;
+}
+@media (max-width: 1023px) {
+  .island-contact-content-info-links__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.island-contact-content-info-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.island-contact-content-info-form__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  width: 416px;
+}
+@media (max-width: 768px) {
+  .island-contact-content-info-form__body {
+    align-items: center;
+  }
+}
+
+.field__input {
+  width: 416px;
+}
+@media (max-width: 768px) {
+  .field__input {
+    width: 330px;
+  }
+}
+.field__input--message {
+  margin-bottom: 8px;
+  width: 500px;
+  font-size: 16px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
+}
+.field__input--message::-webkit-scrollbar {
+  width: 6px;
+}
+.field__input--message::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.field__input--message::-webkit-scrollbar-track {
+  background: transparent;
+}
+@media (max-width: 768px) {
+  .field__input--message {
+    width: 330px;
+  }
 }
 
 .island-about {
