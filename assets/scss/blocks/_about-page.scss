@@ -7,17 +7,6 @@
   flex-direction: column;
   width: 100%;
 
-  &-title {
-    display: flex;
-    flex-direction: column;
-
-    &--name {
-      font-size: 24px;
-      margin-left: 96px;
-      color: var(--text-color-primary)
-    }
-  }
-
   &-content {
     display: flex;
     flex-direction: column;
@@ -56,6 +45,17 @@
       }
     }
 
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+
+    &--name {
+      font-size: 24px;
+      margin-left: 96px;
+      color: var(--text-color-primary)
+    }
   }
 
   &-image-wrapper {
