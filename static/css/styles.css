@@ -1330,8 +1330,7 @@ pre {
 }
 @media (max-width: 1023px) {
   .about-section-image-wrapper--exp-end {
-    top: 6%;
-    right: -10%;
+    left: -9%;
   }
 }
 .about-section-image-wrapper--bullets {
