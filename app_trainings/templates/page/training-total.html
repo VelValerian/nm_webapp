@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}NoMondays - Тренировки{% endblock %}
+{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+{% block og_title %}NoMondays - Тренировки{% endblock %}
+{% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+
+
+{% block content %}
+<section class="section container">
+    {% include 'partials/island/island-training-advantages.html' %}
+</section>
+<section class="section container">
+    {% include 'partials/island/island-training-consulting.html' %}
+</section>
+<section class="section container">
+    {% include 'components/trainings_list.html' with items=items %}
+</section>
+{% endblock %}

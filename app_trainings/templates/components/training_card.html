@@ -1,0 +1,5 @@
+{% block content %}
+  <h1>{{ item.title }}</h1>
+  <p>{{ item.content }}</p>
+  <p><a href="{% url 'trainings:trainings_list' %}">← Назад к списку</a></p>
+{% endblock %}

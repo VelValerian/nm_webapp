@@ -1,0 +1,7 @@
+{% block content %}
+<section class="training-list-grid">
+  {% for card in items %}
+  {% include "components/training_card.html" with card=card %}
+  {% endfor %}
+</section>
+{% endblock %}
