@@ -570,7 +570,7 @@ pre {
   pointer-events: none;
 }
 
-.exercise-card {
+.training-page {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -587,36 +587,36 @@ pre {
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 @media (max-width: 768px) {
-  .exercise-card {
+  .training-page {
     width: 95%;
     height: auto;
   }
 }
 @media (hover: hover) {
-  .exercise-card:hover {
+  .training-page:hover {
     background: var(--background-card-hover-gradient);
   }
 }
 @media (hover: none) {
-  .exercise-card:active {
+  .training-page:active {
     background: var(--background-card-hover-gradient);
   }
 }
-.exercise-card:active {
+.training-page:active {
   background: var(--background-card-select-gradient);
 }
-.exercise-card__image-wrapper {
+.training-page__image-wrapper {
   position: relative;
   width: 252px;
   height: 252px;
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .exercise-card__image-wrapper {
+  .training-page__image-wrapper {
     height: auto;
   }
 }
-.exercise-card__image {
+.training-page__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -624,7 +624,7 @@ pre {
   height: auto;
   object-fit: cover;
 }
-.exercise-card__title {
+.training-page__title {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -956,7 +956,7 @@ pre {
   color: inherit;
 }
 
-.title-sub-island-main-page {
+.title-sub-island-page {
   font-family: var(--font-family-sub);
   font-size: 20px;
   font-weight: 700;
@@ -1294,40 +1294,40 @@ pre {
   color: var(--text-color-primary);
 }
 
-.island-main-exercise {
+.island-main-training {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
 }
-.island-main-exercise__header-wrapper {
+.island-main-training__header-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.island-main-exercise__description-wrapper {
+.island-main-training__description-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.island-main-exercise__description {
+.island-main-training__description {
   font-size: 20px;
   text-align: left;
   color: var(--text-color-primary);
 }
 @media (max-width: 768px) {
-  .island-main-exercise__description {
+  .island-main-training__description {
     width: 80%;
   }
 }
 @media (max-width: 360px) {
-  .island-main-exercise__description {
+  .island-main-training__description {
     width: 90%;
     font-size: 14px;
   }
 }
-.island-main-exercise__list {
+.island-main-training__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
