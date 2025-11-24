@@ -2,6 +2,8 @@
 <section class="training-list-grid">
   {% for card in items %}
   {% include "components/training_card.html" with card=card %}
+  {% empty %}
+  <p>Пока нет доступных тренировок.</p>
   {% endfor %}
 </section>
 {% endblock %}

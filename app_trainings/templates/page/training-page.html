@@ -1,4 +1,27 @@
-<article class="island training-detail">
+{% extends "base.html" %}
+{% block title %}NoMondays - {{ obj.title }}{% endblock %}
+{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+{% block og_title %}NoMondays - {{ obj.title }}{% endblock %}
+{% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+
+
+{% block content %}
+<article class="island island-training-detail">
     <h1>{{ obj.title }}</h1>
-    {# развёрнутый контент #}
+    {% if obj.subtitle %}<p class="lead">{{ obj.subtitle }}</p>{% endif %}
+
+    {% if obj.bullets %}
+    <ul class="island-training-detail__bullets">
+        {% for b in obj.bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    <p class="island-training-detail__price">Цена: ₽ {{ obj.price }} / {{ obj.duration_min }} мин</p>
+
+    {% if obj.content %}
+    <div class="island-training-detail__content">{{ obj.content }}</div>
+    {% endif %}
+
+    <p><a href="{% url 'trainings:list' %}">← Назад к списку</a></p>
 </article>
+{% endblock %}

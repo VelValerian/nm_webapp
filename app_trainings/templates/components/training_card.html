@@ -1,5 +1,21 @@
-{% block content %}
-  <h1>{{ item.title }}</h1>
-  <p>{{ item.content }}</p>
-  <p><a href="{% url 'trainings:trainings_list' %}">← Назад к списку</a></p>
-{% endblock %}
+{# компонент-карточка: НИКАКИХ extends/block #}
+<article class="island island-training-card">
+  <h3 class="island-training-card__title">{{ card.title }}</h3>
+  {% if card.subtitle %}
+  <p class="island-training-card__subtitle">{{ card.subtitle }}</p>
+  {% endif %}
+
+  {% if card.bullets %}
+  <ul class="island-training-card__bullets">
+    {% for b in card.bullets %}<li>{{ b }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="island-training-card__price">
+    ₽ {{ card.price }} / {{ card.duration_min }} мин
+  </div>
+
+  <a class="btn island-training-card__cta" href="{% url 'trainings:page' slug=card.slug %}">
+    Подробнее
+  </a>
+</article>
