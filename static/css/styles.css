@@ -980,6 +980,18 @@ pre {
   flex-direction: column;
   width: 100%;
 }
+.island-contact-image-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.12;
+}
+.island-contact-image-wrapper img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
 .island-contact-content {
   display: flex;
   flex-direction: column;
