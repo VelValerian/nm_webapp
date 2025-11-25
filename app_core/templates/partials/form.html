@@ -1,25 +1,47 @@
-<div class="contact__form">
-    <form class="contact__form-body">
-        <div class="contact__field field">
-            <input
-                    class="field__input"
-                    id="name"
-                    name="name"
-                    placeholder="Ваше имя"
-            />
-            <label for="phone" class="field__label">Укажите Имя</label>
+<div class="island-form-content">
+        <div class="island-form-content__description">
+            <p>
+                Оставьте свои контактные данные, и я свяжусь с вами, чтобы ответить на вопросы и подобрать оптимальный формат занятий.
+            </p>
+            <h3 class="highlight-text">Онлайн-консультация</h3>
+            <div class="island-form-content__description--bullet">
+                <p>Личный разбор вопросов по бегу: техника, экипировка, питание, подготовка.</p>
+                <h4 class="title-sub-island-page">
+                    <img
+                            class="island-about-mini__title-arrow"
+                            src="../../../static/icons/green-check.svg"
+                            alt="chrck"
+                            width="20"
+                            height="20"
+                            loading="lazy"
+                    />
+                    Бесплатная первая консультация
+                </h4>
+            </div>
         </div>
-        <div class="contact__field field">
-            <input
-                    class="field__input"
-                    id="phone"
-                    name="phone"
-                    placeholder="+7(___)___-__-__"
-                    type="tel"
-                    required
-            />
-            <label for="phone" class="field__label">Номер Телефона</label>
+        <div class="island-form-content__form">
+            <form class="island-form-content__form--body">
+                <div class="island-form-content__form--body-field field">
+                    <input
+                            class="field__input"
+                            id="name"
+                            name="name"
+                            placeholder="Ваше имя"
+                    />
+                    <label for="phone" class="field__label">Укажите Имя</label>
+                </div>
+                <div class="island-form-content__form--body-field field">
+                    <input
+                            class="field__input"
+                            id="phone"
+                            name="phone"
+                            placeholder="+7(___)___-__-__"
+                            type="tel"
+                            required
+                    />
+                    <label for="phone" class="field__label">Номер Телефона</label>
+                </div>
+                <button type="submit" class="field__button button">Отправить</button>
+            </form>
         </div>
-        <button type="submit" class="field__button button">Отправить</button>
-    </form>
-</div>
+    </div>

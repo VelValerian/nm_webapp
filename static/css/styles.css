@@ -519,6 +519,45 @@ pre {
   transition: all var(--transition-duration);
 }
 
+.island-form-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  color: var(--text-color-secondary);
+}
+@media (max-width: 1440px) {
+  .island-form-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.island-form-content__description {
+  text-align: left;
+  max-width: 50%;
+  color: var(--text-color-primary);
+}
+@media (max-width: 1440px) {
+  .island-form-content__description {
+    max-width: 85%;
+  }
+}
+.island-form-content__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.island-form-content__form--body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 1440px) {
+  .island-form-content__form--body {
+    align-items: center;
+  }
+}
+
 .field {
   position: relative;
 }
@@ -974,6 +1013,49 @@ pre {
   color: var(--text-color-primary);
 }
 
+.island-training-advantages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.island-training-advantages-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--text-color-secondary);
+}
+.island-training-advantages-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.island-training-advantages-content-wrapper__block {
+  max-width: 50%;
+}
+.island-training-advantages-content-wrapper__block p {
+  text-indent: 2em;
+}
+.island-training-advantages-content-wrapper__block--left p {
+  margin-bottom: 1rem;
+}
+.island-training-advantages-content-wrapper__block--right p {
+  display: list-item;
+  list-style: disc outside;
+  text-indent: 0.5em;
+}
+.island-training-advantages-content-wrapper__block--right strong {
+  font-weight: 900;
+}
+
+.island-training-consulting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .island-contact {
   position: relative;
   display: flex;
@@ -1344,44 +1426,6 @@ pre {
 .island-main-contact__header-wrapper {
   display: flex;
   justify-content: flex-end;
-}
-.island-main-contact__content {
-  display: flex;
-  justify-content: space-around;
-  gap: 32px;
-}
-@media (max-width: 1440px) {
-  .island-main-contact__content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.island-main-contact__description {
-  font-size: 20px;
-  text-align: left;
-  max-width: 50%;
-  color: var(--text-color-primary);
-}
-@media (max-width: 1440px) {
-  .island-main-contact__description {
-    max-width: 85%;
-  }
-}
-.island-main-contact__form {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-}
-.island-main-contact__form-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
-}
-@media (max-width: 1440px) {
-  .island-main-contact__form-body {
-    align-items: center;
-  }
 }
 
 .island-main-about {

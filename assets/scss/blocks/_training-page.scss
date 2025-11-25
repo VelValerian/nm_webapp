@@ -1,0 +1,54 @@
+@use '../tokens/media' as media;
+@use '../tokens/mixins' as m;
+
+.island-training-advantages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--text-color-secondary);
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-top: 1rem;
+
+      &__block {
+        max-width: 50%;
+
+        p {
+          text-indent: 2em;
+        }
+
+        &--left {
+          p {
+            margin-bottom: 1rem;
+          }
+        }
+        &--right {
+          p {
+            display: list-item;
+            list-style: disc outside;
+            text-indent: 0.5em;
+          }
+          strong {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
+
+.island-training-consulting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

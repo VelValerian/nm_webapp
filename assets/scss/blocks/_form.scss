@@ -1,5 +1,45 @@
 @use '../tokens/media' as media;
 
+.island-form-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  color: var(--text-color-secondary);
+
+  @include media.desktop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    text-align: left;
+    max-width: 50%;
+    color: var(--text-color-primary);
+
+    @include media.desktop {
+      max-width: 85%;
+    }
+
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    &--body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+
+      @include media.desktop {
+        align-items: center;
+      }
+    }
+  }
+}
+
 .field {
   position: relative;
 }

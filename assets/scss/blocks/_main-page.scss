@@ -128,45 +128,6 @@
     justify-content: flex-end;
   }
 
-  &__content {
-    display: flex;
-    justify-content: space-around;
-    gap: 32px;
-
-    @include media.desktop {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__description {
-    font-size: 20px;
-    text-align: left;
-    max-width: 50%;
-    color: var(--text-color-primary);
-
-    @include media.desktop {
-      max-width: 85%;
-    }
-
-  }
-
-  &__form {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-
-    &-body {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 20px;
-
-      @include media.desktop {
-        align-items: center;
-      }
-    }
-  }
 }
 
 .island-main-about {
