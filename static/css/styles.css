@@ -1142,6 +1142,7 @@ pre {
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.12;
+  pointer-events: none;
 }
 .island-contact-image-wrapper img {
   height: 100%;
