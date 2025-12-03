@@ -8,25 +8,28 @@
               width="194" height="32" loading="lazy"
       />
     </a>
+
     <nav class="header__menu hidden-mobile">
       <ul class="header__menu-list">
         <li class="header__menu-item">
-          <a class="header__menu-link is-active" href="{% url 'core:home' %}">Главная</a>
+          <a class="header__menu-link {% if request.resolver_match.view_name == 'core:home' %}is-active{% endif %}"
+             href="{% url 'core:home' %}">Главная</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="{% url 'trainings:list' %}">Тренировки</a>
+          <a class="header__menu-link {% if request.resolver_match.view_name == 'core:trainings:list' %}is-active{% endif %}"
+          href="{% url 'trainings:list' %}">Тренировки</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="{% url 'core:corporate' %}">Корпоративы</a>
+          <a class="header__menu-link {% if request.resolver_match.view_name == 'core:corporate' %}is-active{% endif %}"
+          href="{% url 'core:corporate' %}">Корпоративы</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="{% url 'blog:list' %}">Блог</a>
+          <a class="header__menu-link {% if request.resolver_match.view_name == 'core:about' %}is-active{% endif %}"
+          href="{% url 'core:about' %}">Про Меня</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="{% url 'core:about' %}">Про Меня</a>
-        </li>
-        <li class="header__menu-item">
-          <a class="header__menu-link" href="{% url 'core:contacts' %}">Контакты</a>
+          <a class="header__menu-link {% if request.resolver_match.view_name == 'core:contacts' %}is-active{% endif %}"
+          href="{% url 'core:contacts' %}">Контакты</a>
         </li>
       </ul>
     </nav>
