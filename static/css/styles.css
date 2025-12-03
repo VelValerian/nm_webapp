@@ -525,7 +525,7 @@ pre {
   gap: 2rem;
   color: var(--text-color-secondary);
 }
-@media (max-width: 1440px) {
+@media (max-width: 1023px) {
   .island-form-content {
     flex-direction: column;
     align-items: center;
@@ -552,7 +552,7 @@ pre {
   align-items: flex-end;
   gap: 20px;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1023px) {
   .island-form-content__form--body {
     align-items: center;
   }
@@ -1038,15 +1038,31 @@ pre {
   text-indent: 2em;
 }
 .island-training-advantages-content-wrapper__block--left p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 .island-training-advantages-content-wrapper__block--right p {
   display: list-item;
   list-style: disc outside;
   text-indent: 0.5em;
 }
+@media (max-width: 1023px) {
+  .island-training-advantages-content-wrapper__block--right p {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+}
 .island-training-advantages-content-wrapper__block--right strong {
   font-weight: 900;
+}
+@media (max-width: 1023px) {
+  .island-training-advantages-content-wrapper__block {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .island-training-advantages-content-wrapper {
+    flex-direction: column;
+  }
 }
 
 .island-training-consulting {
@@ -1056,6 +1072,57 @@ pre {
   width: 100%;
 }
 
+.training-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.island-training-card {
+  flex: 1 1 calc(50% - 1rem); /* каждая карточка стремится занять половину строки */
+  min-width: 360px; /* но не ужимается уже 360px */
+  color: var(--text-color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.island-training-card__content-up {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.island-training-card__content-up--bullets {
+  margin-top: 2rem;
+}
+.island-training-card__content-up--bullets li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.island-training-card__content-low {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: x-large;
+  gap: 1rem;
+}
+.island-training-card__content-low--price {
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .training-list {
+    flex-direction: column; /* карточки идут столбиком */
+  }
+  .island-training-card {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%; /* каждая растягивается на всю ширину контейнера */
+  }
+}
 .island-contact {
   position: relative;
   display: flex;

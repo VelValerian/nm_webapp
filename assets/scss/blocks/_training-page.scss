@@ -80,6 +80,38 @@
   flex: 1 1 calc(50% - 1rem);   /* каждая карточка стремится занять половину строки */
   min-width: 360px;             /* но не ужимается уже 360px */
   color: var(--text-color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--bullets {
+      margin-top: 2rem;
+      li {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+  }
+
+  &__content-low {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: x-large;
+    gap: 1rem;
+
+    &--price {
+      justify-content: center;
+    }
+  }
 }
 
 @media (max-width: 760px) {
@@ -93,3 +125,4 @@
     width: 100%;                /* каждая растягивается на всю ширину контейнера */
   }
 }
+

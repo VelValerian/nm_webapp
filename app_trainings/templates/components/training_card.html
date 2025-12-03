@@ -1,21 +1,33 @@
 {# компонент-карточка: НИКАКИХ extends/block #}
-<article class="island island-training-card">
-  <h3 class="island-training-card__title title">{{ card.title }}</h3>
-  {% if card.subtitle %}
-  <p class="island-training-card__subtitle">{{ card.subtitle }}</p>
-  {% endif %}
+<article class="island island-training-card" xmlns="http://www.w3.org/1999/html">
+  <div class="island-training-card__content-up">
+    <div class="island-training-card__content-up--title">
+      <h3 class="island-training-card__title title">{{ card.title }}</h3>
+      {% if card.subtitle %}
+      <p class="island-training-card__description title">{{ card.subtitle }}</p>
+      {% endif %}
+    </div>
 
-  {% if card.bullets %}
-  <ul class="island-training-card__bullets">
-    {% for b in card.bullets %}<li>{{ b }}</li>{% endfor %}
-  </ul>
-  {% endif %}
-
-  <div class="island-training-card__price">
-    ₽ {{ card.price }} / {{ card.duration_min }} мин
+    {% if card.bullets %}
+    <ul class="island-training-card__content-up--bullets">
+      {% for b in card.bullets %}<li> <img
+            class="island-about-mini__title-arrow"
+            src="../../../static/icons/green-check.svg"
+            alt="chrck"
+            width="20"
+            height="20"
+            loading="lazy"
+    /> {{ b }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </div>
 
-  <a class="btn island-training-card__cta" href="{% url 'trainings:page' slug=card.slug %}">
+  <div class="island-training-card__content-low">
+    <div class="title island-training-card__content-low--price ">
+      ₽ {{ card.price }} / {{ card.duration_min }} мин
+    </div>
+    <a class="button island-training-card__cta" href="{% url 'trainings:page' slug=card.slug %}">
     Подробнее
   </a>
+  </div>
 </article>
