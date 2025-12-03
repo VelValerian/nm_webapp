@@ -14,6 +14,7 @@ STUB_ITEMS = [
         ],
         price=3500,
         duration_min=60,
+        img="online-exercise.png",
         slug="personal",
         content="Развёрнутое описание персональной тренировки."
     ),
@@ -26,6 +27,7 @@ STUB_ITEMS = [
         ],
         price=1500,
         duration_min=45,
+        img="mini-groupe.png",
         slug="online-consult",
         content="Полное описание онлайн-консультации."
     ),
@@ -39,6 +41,7 @@ STUB_ITEMS = [
         ],
         price=3500,
         duration_min=60,
+        img="online-exercise.png",
         slug="personal",
         content="Развёрнутое описание персональной тренировки."
     ),
@@ -52,6 +55,7 @@ STUB_ITEMS = [
         ],
         price=3500,
         duration_min=60,
+        img="online-exercise.png",
         slug="personal",
         content="Развёрнутое описание персональной тренировки."
     ),

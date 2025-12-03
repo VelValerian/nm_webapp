@@ -1,5 +1,13 @@
-{# компонент-карточка: НИКАКИХ extends/block #}
-<article class="island island-training-card" xmlns="http://www.w3.org/1999/html">
+<article class="island island-training-card">
+  <div class="island-training-card__image-wrapper">
+    <img
+            src="../../static/img/training/{{ card.img }}"
+            alt="Андрей Кузнецов"
+            width="432"
+            height="786"
+            loading="lazy"
+    />
+  </div>
   <div class="island-training-card__content-up">
     <div class="island-training-card__content-up--title">
       <h3 class="island-training-card__title title">{{ card.title }}</h3>
@@ -21,7 +29,6 @@
     </ul>
     {% endif %}
   </div>
-
   <div class="island-training-card__content-low">
     <div class="title island-training-card__content-low--price ">
       ₽ {{ card.price }} / {{ card.duration_min }} мин
