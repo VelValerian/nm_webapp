@@ -2,7 +2,6 @@
 @use '../tokens/mixins' as m;
 
 .mobile-overlay {
-  // 1. СБРОС СТИЛЕЙ ДИАЛОГОВОГО ОКНА (КРИТИЧНО ВАЖНО)
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -27,7 +26,7 @@
     margin-bottom: 20px; // Отступ от крестика до меню
   }
 
-  // 2. РИСУЕМ КРЕСТИК ЧЕРЕЗ CSS (раз картинки нет)
+  // 2. РИСУЕМ КРЕСТИК ЧЕРЕЗ CSS
   &__close-button {
     background: transparent;
     border: none;
@@ -47,9 +46,7 @@
       position: absolute;
       width: 24px;              // Длина полоски
       height: 2px;              // Толщина полоски
-      background-color: #fff;   // Цвет крестика (белый)
-      // Если у вас есть переменная цвета, используйте её:
-      // background-color: var(--text-color);
+      background-color: var(--color-primary);
       border-radius: 2px;
     }
 
@@ -100,8 +97,14 @@
 
     // Стили для активной ссылки (текущей страницы)
     &.is-active {
-      // Добавьте стили для активного пункта, если нужно
-      // например: border-color: var(--color-accent-orange);
+      // Делаем активную ссылку такой же яркой, как при наведении (hover)
+      color: var(--color-accent-orange);
+      border: var(--border-nav-hover);
+      background: var(--nav-background-hover);
+
+      // Можно добавить pointer-events: none, если хотите,
+      // чтобы на активную ссылку нельзя было нажать повторно:
+      // pointer-events: none;
     }
   }
 }

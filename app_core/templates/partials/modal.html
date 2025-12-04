@@ -1,4 +1,3 @@
-<!-- Модальное окно -->
 <dialog class="mobile-overlay visible-mobile" id="mobileMenu">
     <form class="mobile-overlay__close-button-wrapper" method="dialog">
         <button
@@ -10,24 +9,42 @@
     </form>
     <div class="mobile-overlay__body">
         <ul class="mobile-overlay__list">
+
             <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link is-active" href="index.html">Главная</a>
+                <a class="mobile-overlay__link {% if request.resolver_match.view_name == 'core:home' %}is-active{% endif %}"
+                   href="{% url 'core:home' %}">
+                    Главная
+                </a>
             </li>
+
             <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link" href="exercise.html">Занятия</a>
+                <a class="mobile-overlay__link {% if request.resolver_match.view_name == 'core:trainings:list' %}is-active{% endif %}"
+                   href="{% url 'trainings:list' %}">
+                    Тренировки
+                </a>
             </li>
+
             <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link" href="corporation.html">Корпоративы</a>
+                <a class="mobile-overlay__link {% if request.resolver_match.view_name == 'core:corporate' %}is-active{% endif %}"
+                   href="{% url 'core:corporate' %}">
+                    Корпоративы
+                </a>
             </li>
+
             <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link" href="blog.html">Блог</a>
+                <a class="mobile-overlay__link {% if request.resolver_match.view_name == 'core:about' %}is-active{% endif %}"
+                   href="{% url 'core:about' %}">
+                    Про Меня
+                </a>
             </li>
+
             <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link" href="about.html">Про Меня</a>
+                <a class="mobile-overlay__link {% if request.resolver_match.view_name == 'core:contacts' %}is-active{% endif %}"
+                   href="{% url 'core:contacts' %}">
+                    Контакты
+                </a>
             </li>
-            <li class="mobile-overlay__item">
-                <a class="mobile-overlay__link" href="contact.html">Контакты</a>
-            </li>
+
         </ul>
     </div>
 </dialog>

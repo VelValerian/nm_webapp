@@ -979,7 +979,7 @@ pre {
   position: absolute;
   width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--color-primary);
   border-radius: 2px;
 }
 .mobile-overlay__close-button::before {
@@ -1029,6 +1029,12 @@ pre {
   border: var(--border-nav-click);
   background: var(--background-nav-click-gradient);
 }
+.mobile-overlay__link.is-active {
+  color: var(--color-accent-orange);
+  border: var(--border-nav-hover);
+  background: var(--nav-background-hover);
+}
+
 .island {
   padding: var(--island-padding-x-large);
   background: var(--background-island-primary-gradient);
