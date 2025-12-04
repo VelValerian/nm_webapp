@@ -1,0 +1,107 @@
+@use '../tokens/media' as media;
+@use '../tokens/mixins' as m;
+
+.mobile-overlay {
+  // 1. СБРОС СТИЛЕЙ ДИАЛОГОВОГО ОКНА (КРИТИЧНО ВАЖНО)
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  // Перебиваем стандартные ограничения dialog
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;     // Обязательно для dialog
+  max-height: 100vh;    // Обязательно для dialog
+
+  margin: 0;
+  padding: 14px 20px;
+  border: none;
+  background: var(--background-main-gradient);
+
+  // Убираем возможную прокрутку, если контент влезает
+  overflow: hidden;
+
+  &__close-button-wrapper {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px; // Отступ от крестика до меню
+  }
+
+  // 2. РИСУЕМ КРЕСТИК ЧЕРЕЗ CSS (раз картинки нет)
+  &__close-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;       // Увеличим область клика
+    position: relative;  // Чтобы позиционировать полоски крестика
+    width: 44px;         // Явный размер кнопки
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Рисуем полоски крестика через псевдо-элементы
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;              // Длина полоски
+      height: 2px;              // Толщина полоски
+      background-color: #fff;   // Цвет крестика (белый)
+      // Если у вас есть переменная цвета, используйте её:
+      // background-color: var(--text-color);
+      border-radius: 2px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    // Эффект при наведении на крестик
+    &:hover::before,
+    &:hover::after {
+      background-color: var(--color-accent-orange); // Или ваш цвет ховера
+    }
+  }
+
+  &__list {
+    @include m.flex-center;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;       // Растягиваем список
+    padding-bottom: 80px; // Компенсация, чтобы центр был визуально приятнее
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px !important;
+    color: var(--color-primary);
+    border: var(--border-nav-selected);
+    background: var(--background-nav-selected-gradient);
+    border-radius: var(--border-radius-nav-button);
+    text-decoration: none; // Убираем подчеркивание ссылке
+
+    @include media.hover {
+      color: var(--color-accent-orange);
+      border: var(--border-nav-hover);
+      background: var(--nav-background-hover);
+    }
+
+    &:active {
+      color: var(--text-color-alt);
+      border: var(--border-nav-click);
+      background: var(--background-nav-click-gradient);
+    }
+
+    // Стили для активной ссылки (текущей страницы)
+    &.is-active {
+      // Добавьте стили для активного пункта, если нужно
+      // например: border-color: var(--color-accent-orange);
+    }
+  }
+}
