@@ -14,7 +14,18 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
+
+  // --- ВОТ ЭТОТ БЛОК ОТВЕЧАЕТ ЗА ПРИЖАТИЕ ФУТЕРА ---
+  min-height: 100vh;      // 1. Высота body минимум во весь экран
+  display: flex;          // 2. Включаем Flexbox
+  flex-direction: column; // 3. Выстраиваем элементы в колонку (сверху вниз)
+  overflow-x: hidden;
 }
+
+footer, .footer { // Используйте тег или класс вашего футера
+  margin-top: auto;
+}
+
 
 a,
 button,
