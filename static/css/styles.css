@@ -1727,4 +1727,24 @@ pre {
   text-indent: 0;
 }
 
+.island-corporate-consulting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.island-form-corporate-content__image-wrapper {
+  position: absolute;
+  right: 20%;
+  z-index: -1;
+  opacity: 0.1;
+}
+@media (max-width: 1023px) {
+  .island-form-corporate-content__image-wrapper {
+    opacity: 0;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
