@@ -54,6 +54,14 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+footer, .footer {
+  margin-top: auto;
 }
 
 a,
@@ -1677,6 +1685,46 @@ pre {
     width: 70%;
     font-size: 14px;
   }
+}
+
+.island-corporate-advantages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.island-corporate-advantages-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--text-color-secondary);
+}
+.island-corporate-advantages-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.island-corporate-advantages-content-wrapper__block p {
+  text-indent: 2em;
+}
+.island-corporate-advantages-content-wrapper__block--up p {
+  margin-bottom: 1rem;
+}
+.island-corporate-advantages-content-wrapper__block--down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+}
+.island-corporate-advantages-content-wrapper__block--down li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.island-corporate-advantages-content-wrapper__block--down li p {
+  text-indent: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

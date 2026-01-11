@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}Корпоративные тренировки{% endblock %}
+{% block title %}NoMondays - Корпоративные Тренировки{% endblock %}
+{% block meta_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+{% block og_title %}NoMondays - Корпоративные Тренировки{% endblock %}
+{% block og_description %}Короткое описание страницы (120–160 символов).{% endblock %}
+
 {% block content %}
-  <section class="hero">
-    <h1>Корпоративные тренировки</h1>
-    <p>Здесь будет корпоротивный-блок.</p>
-  </section>
+<section class="section container">
+    {% include 'partials/island/island-main-corporate.html' %}
+</section>
+<section class="section container">
+    {% include 'partials/island/island-training-consulting.html' %}
+</section>
+<section class="section container">
+    {% include 'components/trainings_list.html' with items=items %}
+</section>
 {% endblock %}

@@ -1,0 +1,55 @@
+@use '../tokens/media' as media;
+@use '../tokens/mixins' as m;
+
+.island-corporate-advantages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: var(--text-color-secondary);
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            &__block {
+                
+
+                p {
+                    text-indent: 2em;
+                }
+
+                &--up {
+                    p {
+                        margin-bottom: 1rem;
+                    }
+                }
+                &--down {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: fit-content;
+                    margin: 0 auto;
+
+                    li {
+                        display: flex;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+                        p {
+                            text-indent: 0;
+                        }   
+                    }
+
+                }
+            }
+
+        }
+    }
+}
